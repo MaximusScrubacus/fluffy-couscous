@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://kbfjj86c7pxh"]
+
+[ext_resource type="PackedScene" uid="uid://d18sdtv8t4mck" path="res://Assets/Prototype/Prototype.glb" id="1_7h0kd"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Prototype" parent="." instance=ExtResource("1_7h0kd")]
