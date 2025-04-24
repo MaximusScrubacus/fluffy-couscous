@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxl6r6xrqym0m"]
+
+[ext_resource type="PackedScene" uid="uid://b8ibbcf14o2fc" path="res://World/Assets/Characters/Dummy/DummyAnims.glb" id="1_0uwih"]
+
+[node name="DummyAnims" instance=ExtResource("1_0uwih")]
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(0.693091, 0.00142172, -0.720849, 0.0657767, 0.995701, 0.0652076, 0.717843, -0.0926099, 0.690018, 0.0209641, -0.107711, 0.0283548)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-0.166951, 0.0246842, -0.0128588, 0.985572)
+bones/3/rotation = Quaternion(0.0386176, 0.0556658, -0.0137905, 0.997607)
+bones/4/rotation = Quaternion(0.0316882, 0.111047, 0.0494617, 0.992078)
+bones/5/rotation = Quaternion(0.1454, 0.0319964, -0.0246438, 0.988548)
+bones/7/rotation = Quaternion(-0.414582, 0.502682, 0.55496, 0.517158)
+bones/8/rotation = Quaternion(-0.0561798, -0.412372, 0.661772, 0.623579)
+bones/9/rotation = Quaternion(0.845094, -0.0140637, 0.000828751, 0.534432)
+bones/10/rotation = Quaternion(0.117094, -0.00828457, 0.0986018, 0.988179)
+bones/11/rotation = Quaternion(-0.322437, 0.847315, 0.297553, -0.299255)
+bones/12/rotation = Quaternion(0.505208, -0.187743, 0.248555, 0.804822)
+bones/14/rotation = Quaternion(0.343638, -0.608831, 0.354077, 0.621182)
+bones/15/rotation = Quaternion(0.812826, 0.000194157, 0.113395, 0.571363)
+bones/16/rotation = Quaternion(0.445796, 0.0304858, 0.0655375, 0.892212)
+bones/18/rotation = Quaternion(0.28474, -0.627596, 0.306004, 0.656817)
+bones/19/rotation = Quaternion(0.84295, -0.0134311, 0.0962776, 0.529136)
+bones/20/rotation = Quaternion(0.555848, -0.0101804, 0.0506292, 0.829678)
+bones/22/rotation = Quaternion(0.271364, -0.633498, 0.307999, 0.65588)
+bones/23/rotation = Quaternion(0.9089, -0.0206026, 0.103849, 0.40335)
+bones/24/rotation = Quaternion(0.624029, -0.00909804, 0.0668692, 0.778481)
+bones/26/rotation = Quaternion(0.310663, -0.553936, 0.421777, 0.647107)
+bones/27/rotation = Quaternion(0.743601, -0.0702278, 0.0176944, 0.66469)
+bones/28/rotation = Quaternion(0.899224, 0.019833, 0.0665775, 0.431938)
+bones/30/rotation = Quaternion(-0.549573, -0.374914, -0.525588, 0.530252)
+bones/31/rotation = Quaternion(-0.158615, 0.268765, -0.397454, 0.862923)
+bones/32/rotation = Quaternion(0.846814, 0.0140958, -0.000897238, 0.531702)
+bones/33/rotation = Quaternion(0.00265112, 0.0746183, -0.163325, 0.983743)
+bones/34/rotation = Quaternion(0.313384, 0.856037, 0.280833, 0.300206)
+bones/35/rotation = Quaternion(0.497571, 0.190307, -0.235867, 0.812757)
+bones/37/rotation = Quaternion(0.340327, 0.607465, -0.364174, 0.6185)
+bones/38/rotation = Quaternion(0.810718, 0.00259643, -0.127448, 0.57139)
+bones/39/rotation = Quaternion(0.444081, -0.0302947, -0.0743431, 0.892383)
+bones/41/rotation = Quaternion(0.282366, 0.626196, -0.315592, 0.654637)
+bones/42/rotation = Quaternion(0.840852, 0.0161433, -0.111357, 0.52944)
+bones/43/rotation = Quaternion(0.554623, 0.0114778, -0.0594655, 0.829895)
+bones/45/rotation = Quaternion(0.268867, 0.632129, -0.317411, 0.653738)
+bones/46/rotation = Quaternion(0.90651, 0.0234727, -0.12085, 0.403837)
+bones/47/rotation = Quaternion(0.622481, 0.0104789, -0.0775755, 0.77871)
+bones/49/rotation = Quaternion(0.306758, 0.552526, -0.431349, 0.643858)
+bones/50/rotation = Quaternion(0.742513, 0.0716183, -0.0316565, 0.665239)
+bones/51/rotation = Quaternion(0.897567, -0.0183712, -0.0844046, 0.432333)
+bones/53/rotation = Quaternion(0.909209, -0.22786, 0.18816, 0.293282)
+bones/54/rotation = Quaternion(0.580532, 0.0132834, 0.077646, 0.810418)
+bones/55/rotation = Quaternion(-0.754805, 0.114068, -0.211463, 0.610362)
+bones/56/rotation = Quaternion(-2.93798e-07, 0.964984, -0.262311, 1.65156e-05)
+bones/58/rotation = Quaternion(0.882695, 0.134921, -0.128977, 0.431291)
+bones/59/rotation = Quaternion(0.572972, 0.0852161, 0.0042386, 0.815121)
+bones/60/rotation = Quaternion(-0.708298, 0.0328379, 0.149402, 0.68914)
+bones/61/rotation = Quaternion(-5.7962e-08, 0.961272, -0.2756, -1.74424e-05)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Walking"

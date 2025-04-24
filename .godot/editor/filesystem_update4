@@ -1,3 +1,4 @@
-res://tpose.res
-res://menu.tscn
+res://character.tscn
 res://world.tscn
+res://dummy.tscn
+res://playerCharacter.tscn

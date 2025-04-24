@@ -26,8 +26,10 @@ window/stretch/mode="viewport"
 [file_customization]
 
 folder_colors={
+"res://Audio/": "yellow",
 "res://Scripts/": "pink",
-"res://UI/": "purple"
+"res://UI/": "purple",
+"res://World/": "red"
 }
 
 [global_group]

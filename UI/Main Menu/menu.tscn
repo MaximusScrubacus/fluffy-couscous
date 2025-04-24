@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bvonft6u2mmwt" path="res://UI/Main Menu/menu.gd" id="1_lti8b"]
 [ext_resource type="FontFile" uid="uid://dii62aj1te4my" path="res://UI/Font/Darinia/Darinia.ttf" id="2_ouk20"]
 [ext_resource type="Shader" uid="uid://bwl3yfu0ell4u" path="res://UI/Main Menu/menu.gdshader" id="2_ytr4m"]
-[ext_resource type="AudioStream" uid="uid://02c1xqi0d1sy" path="res://doorOpen_1.ogg" id="3_4hy44"]
-[ext_resource type="AudioStream" uid="uid://bkjxp4mdm4m4k" path="res://bookFlip2.ogg" id="4_ytr4m"]
+[ext_resource type="AudioStream" uid="uid://02c1xqi0d1sy" path="res://Audio/doorOpen_1.ogg" id="3_4hy44"]
+[ext_resource type="AudioStream" uid="uid://bkjxp4mdm4m4k" path="res://Audio/bookFlip2.ogg" id="4_ytr4m"]
 
 [sub_resource type="Theme" id="Theme_ouk20"]
 
