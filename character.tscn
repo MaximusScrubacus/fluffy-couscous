@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://l3y8hhsb8q7v" path="res://Images/Crosshair.png" id="2_px5sl"]
 [ext_resource type="Script" uid="uid://c537cf7gtap5n" path="res://Scripts/Hitbox.gd" id="3_wfnr8"]
 [ext_resource type="Texture2D" uid="uid://bw8mh5k0qbjc7" path="res://LowPolyKnightArm_Material.png" id="4_px5sl"]
-[ext_resource type="FontFile" uid="uid://dii62aj1te4my" path="res://Assets/Darinia/Darinia.ttf" id="4_wfnr8"]
+[ext_resource type="FontFile" uid="uid://dii62aj1te4my" path="res://UI/Font/Darinia/Darinia.ttf" id="4_wfnr8"]
 [ext_resource type="AudioStream" uid="uid://tm3q0a4uknlx" path="res://Audio/sword-sound-260274.mp3" id="6_0qfo5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aqk2v"]

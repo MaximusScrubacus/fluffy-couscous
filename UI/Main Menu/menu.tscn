@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://r7oge8o6kw64"]
+
+[ext_resource type="Script" uid="uid://bvonft6u2mmwt" path="res://UI/Main Menu/menu.gd" id="1_lti8b"]
+[ext_resource type="FontFile" uid="uid://dii62aj1te4my" path="res://UI/Font/Darinia/Darinia.ttf" id="2_ouk20"]
+[ext_resource type="Shader" uid="uid://bwl3yfu0ell4u" path="res://UI/Main Menu/menu.gdshader" id="2_ytr4m"]
+[ext_resource type="AudioStream" uid="uid://02c1xqi0d1sy" path="res://doorOpen_1.ogg" id="3_4hy44"]
+[ext_resource type="AudioStream" uid="uid://bkjxp4mdm4m4k" path="res://bookFlip2.ogg" id="4_ytr4m"]
+
+[sub_resource type="Theme" id="Theme_ouk20"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l48gv"]
+shader = ExtResource("2_ytr4m")
+shader_parameter/spin_rotation_speed = 2.0
+shader_parameter/move_speed = 7.0
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/colour_1 = Color(0.871, 0.267, 0.231, 1)
+shader_parameter/colour_2 = Color(0, 0.42, 0.706, 1)
+shader_parameter/colour_3 = Color(0.086, 0.137, 0.145, 1)
+shader_parameter/contrast = 3.5
+shader_parameter/lighting = 0.4
+shader_parameter/spin_amount = 0.25
+shader_parameter/pixel_filter = 740.0
+shader_parameter/is_rotating = false
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ouk20")
+script = ExtResource("1_lti8b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+material = SubResource("ShaderMaterial_l48gv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -50.5
+offset_right = 56.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+theme_override_fonts/font = ExtResource("2_ouk20")
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ouk20")
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_fonts/font = ExtResource("2_ouk20")
+text = "Exit Game"
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4hy44")
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ytr4m")
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

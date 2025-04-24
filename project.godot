@@ -26,7 +26,8 @@ window/stretch/mode="viewport"
 [file_customization]
 
 folder_colors={
-"res://Scripts/": "pink"
+"res://Scripts/": "pink",
+"res://UI/": "purple"
 }
 
 [global_group]

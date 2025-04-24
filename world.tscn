@@ -285,3 +285,7 @@ player_path = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94135, 0.518856, -0.650735)
+
+[node name="Dummy2" parent="." instance=ExtResource("4_aqk2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0616, 1.38703, 0.217911)
+player_path = NodePath("../Player")
