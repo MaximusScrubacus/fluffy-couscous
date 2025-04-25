@@ -11,6 +11,7 @@ extends CharacterBody3D
 @onready var ragdoll: PhysicalBoneSimulator3D = $EnemyDummy/Armature_001/GeneralSkeleton/Ragdoll
 @onready var world_collider: CollisionShape3D = $WorldCollider
 @onready var hurtbox_collider: CollisionShape3D = $Hurtbox/CollisionShape3D
+@onready var audio_stream_player: AudioStreamPlayer = $Node/AudioStreamPlayer
 
 
 
@@ -25,6 +26,7 @@ const ATTACK_RANGE = 2.5
 func take_damage(amount : int ) -> void:
 	health -= amount
 	$HitTimer.start()
+	audio_stream_player.play()
 	$bloodSplat/bloodParticle.emitting = true	
 	animation_tree["parameters/conditions/hit"] = true
 	if health == 0.0:
