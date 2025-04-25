@@ -90,6 +90,11 @@ Interact={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="World"
+3d_physics/layer_2="Damage"
+
 [physics]
 
-3d/physics_engine="Jolt Physics"
+3d/physics_engine="GodotPhysics3D"

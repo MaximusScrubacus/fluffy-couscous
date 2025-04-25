@@ -3,14 +3,15 @@ extends CharacterBody3D
 @export var player_path : NodePath
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 @onready var progress_bar: ProgressBar = %ProgressBar
-@onready var animation_player: AnimationPlayer = $CollisionShape3D/DummyAnims/AnimationPlayer
-@onready var animation_tree: AnimationTree = $CollisionShape3D/DummyAnims/AnimationPlayer/AnimationTree
-@onready var area_3d: Area3D = $CollisionShape3D/Area3D
 @onready var hit_timer: Timer = $HitTimer
-@onready var ragdoll: PhysicalBoneSimulator3D = $CollisionShape3D/DummyAnims/Armature/Skeleton3D/PhysicalBoneSimulator3D
-@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
 @onready var health_bar: Node3D = $"Health Bar"
 @onready var blood_splat: Node3D = $bloodSplat
+@onready var animation_tree: AnimationTree = $EnemyDummy/AnimationPlayer/AnimationTree
+@onready var animation_player: AnimationPlayer = $EnemyDummy/AnimationPlayer
+@onready var ragdoll: PhysicalBoneSimulator3D = $EnemyDummy/Armature_001/GeneralSkeleton/Ragdoll
+@onready var world_collider: CollisionShape3D = $WorldCollider
+@onready var hurtbox_collider: CollisionShape3D = $Hurtbox/CollisionShape3D
+
 
 
 
@@ -29,7 +30,10 @@ func take_damage(amount : int ) -> void:
 	if health == 0.0:
 		dummy_is_dead = true
 		health_bar.hide()
-		$CollisionShape3D/DummyAnims/Armature/Skeleton3D/PhysicalBoneSimulator3D.physical_bones_start_simulation()
+		world_collider.disabled = true
+		hurtbox_collider.disabled = true
+		ragdoll.physical_bones_start_simulation()
+
 
 func health_update():
 	%ProgressBar.value = health

@@ -1836,8 +1836,8 @@ _subresources={
 },
 "nodes": {
 "PATH:Armature/Skeleton3D": {
-"rest_pose/load_pose": 1,
-"rest_pose/selected_animation": "Walking"
+"rest_pose/selected_animation": "Walking",
+"retarget/bone_map": Resource("res://Mixamo BoneMap.tres")
 }
 }
 }
