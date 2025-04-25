@@ -35,7 +35,7 @@ func take_damage(amount : int ) -> void:
 		world_collider.disabled = true
 		hurtbox_collider.disabled = true
 		ragdoll.physical_bones_start_simulation()
-
+		
 
 func health_update():
 	%ProgressBar.value = health

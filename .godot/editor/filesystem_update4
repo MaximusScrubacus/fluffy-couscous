@@ -1,8 +1,8 @@
-res://World/Assets/Tiles/DungeonTileSet/dungeon-tileset.tres
+res://world.tscn
 res://addons/GPUTrail-main/defaults/texture.tres
 res://addons/GPUTrail-main/defaults/curve.tres
+res://World/Assets/Tiles/DungeonTileSet/dungeon-tileset.tres
 res://World/Assets/Characters/PlayerCharacter/playerCharacter.tscn
-res://world.tscn
-res://sword_trail.tscn
 res://World/Assets/Characters/Dummy/dummy.tscn
 res://World/Assets/Characters/Dummy/dummy.gd
+res://World/Assets/Characters/PlayerCharacter/playerCharacter.gd

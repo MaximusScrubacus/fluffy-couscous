@@ -59,23 +59,8 @@ script = SubResource("GDScript_ic0uy")
 
 [node name="Player" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.94135, 0.518856, -0.650735)
+SENSITIVITY = 0.001
 
 [node name="Dummy" parent="." instance=ExtResource("4_aqk2v")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10.7097, 1.13534, 1.48613)
-player_path = NodePath("../Player")
-
-[node name="Dummy2" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5245, 1.62708, -3.65758)
-player_path = NodePath("../Player")
-
-[node name="Dummy3" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.93649, 1.62708, -3.62376)
-player_path = NodePath("../Player")
-
-[node name="Dummy4" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.69444, 1.62708, 1.192)
-player_path = NodePath("../Player")
-
-[node name="Dummy5" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.42506, 1.62708, -1.04231)
 player_path = NodePath("../Player")

@@ -5,7 +5,7 @@ var speed
 const WALK_SPEED = 5.0
 const  SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.5
-const SENSITIVITY = .01
+@export var SENSITIVITY = .01
 var attack_enabled = true
 #Head Bob Variables
 const BOB_FREQ = 2.0
@@ -19,8 +19,9 @@ var t_bob = 0.0
 @onready var sword_cam: Camera3D = $"Head/Camera3D/SubViewportContainer/SubViewport/Sword Cam"
 @onready var Lantern: OmniLight3D = $Head/Camera3D/OmniLight3D
 @onready var sword_swing: AudioStreamPlayer = $swordSwing
+@onready var animation_tree: AnimationTree = $Head/Camera3D/KnightSkin/LowPolyKnightArm/AnimationPlayer/AnimationTree
 
-
+var is_moving = velocity.x
 
 
 
@@ -39,6 +40,7 @@ func melee():
 			%Timer.start()
 			attack_enabled = false
 			sword_swing.play()
+			
 #			Testing HIT/HURTBOXES Commented OUT
 			#for body in hitbox.get_overlapping_bodies():
 				#if body.is_in_group("Enemy"):
@@ -75,13 +77,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func _physics_process(delta: float) -> void:
 #Raycast hand for object interaction
-	%interactText.hide()
-	if %handOfGod.is_colliding():
-		var target = %handOfGod.get_collider()
-		if target != null and target.is_in_group("Interactable") :
-			%interactText.show()
-		if Input.is_action_just_pressed("Interact"):
-			target.interact()
+	#%interactText.hide()
+	#if %handOfGod.is_colliding():
+		#var target = %handOfGod.get_collider()
+		#if target != null and target.is_in_group("Interactable") :
+			#%interactText.show()
+		#if Input.is_action_just_pressed("Interact"):
+			#target.interact()
 		
 	melee()
 	
@@ -125,6 +127,10 @@ func _physics_process(delta: float) -> void:
 	camera_3d.transform.origin = _headbob(t_bob)
 
 	move_and_slide()
+	
+	if is_moving > 0:
+			animation_tree["parameters/conditions/Walking"] = true
+	
 	
 	
 func _headbob(time):
