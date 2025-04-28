@@ -12,6 +12,10 @@ extends CharacterBody3D
 @onready var world_collider: CollisionShape3D = $WorldCollider
 @onready var hurtbox_collider: CollisionShape3D = $Hurtbox/CollisionShape3D
 @onready var audio_stream_player: AudioStreamPlayer = $Node/AudioStreamPlayer
+@onready var hit_flash: GPUParticles3D = $HitFlash/HitFlash
+@onready var hit_flare: GPUParticles3D = $HitFlash/HitFlare
+@onready var hit_shock_wave: GPUParticles3D = $HitFlash/HitShockWave
+@onready var hit_sparks: GPUParticles3D = $HitFlash/HitSparks
 
 
 
@@ -27,7 +31,11 @@ func take_damage(amount : int ) -> void:
 	health -= amount
 	$HitTimer.start()
 	audio_stream_player.play()
-	$bloodSplat/bloodParticle.emitting = true	
+	hit_flash.emitting = true	
+	hit_flare.emitting = true
+	hit_shock_wave.emitting = true
+	hit_sparks.emitting = true
+	#$bloodSplat/bloodParticle.emitting = true	
 	animation_tree["parameters/conditions/hit"] = true
 	if health == 0.0:
 		dummy_is_dead = true

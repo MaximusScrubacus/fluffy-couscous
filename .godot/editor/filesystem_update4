@@ -1,8 +1,10 @@
-res://world.tscn
+res://HitFX.tscn
 res://addons/GPUTrail-main/defaults/texture.tres
 res://addons/GPUTrail-main/defaults/curve.tres
 res://World/Assets/Tiles/DungeonTileSet/dungeon-tileset.tres
-res://World/Assets/Characters/PlayerCharacter/playerCharacter.tscn
+res://hit_flash.gd
 res://World/Assets/Characters/Dummy/dummy.tscn
 res://World/Assets/Characters/Dummy/dummy.gd
+res://world.tscn
+res://World/Assets/Characters/PlayerCharacter/playerCharacter.tscn
 res://World/Assets/Characters/PlayerCharacter/playerCharacter.gd
